@@ -14,8 +14,8 @@ type Flags struct {
 	URL         string
 	VUs         int
 	Duration    string
-	Iterations  int      // 0 = not set
-	RPS         int      // 0 = closed model (default)
+	Iterations  int // 0 = not set
+	RPS         int // 0 = closed model (default)
 	Method      string
 	Headers     []string // "Key: Value" format
 	Body        string   // empty = null in script

@@ -7,6 +7,7 @@ import (
 	"strings"
 )
 
+//nolint:gochecknoglobals // read-only set of HTTP method names
 var knownMethods = map[string]bool{
 	"GET":     true,
 	"POST":    true,

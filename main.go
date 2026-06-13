@@ -27,7 +27,7 @@ Exit codes: k6's exit code is propagated verbatim (0=ok, 99=threshold failure, e
 		SilenceErrors: true,
 		SilenceUsage:  true,
 		// RunE is a no-op; all real logic is in run() called from main().
-		RunE: func(cmd *cobra.Command, args []string) error {
+		RunE: func(_ *cobra.Command, _ []string) error {
 			return nil
 		},
 	}

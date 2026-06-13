@@ -153,7 +153,6 @@ func TestGeneratedScriptPassesK6Inspect(t *testing.T) {
 		tc := tc
 		t.Run(tc.name, func(t *testing.T) {
 			script := generateScript(tc.flags)
-			//nolint:gosec // k6Path from LookPath; script is test-generated
 			cmd := exec.Command(k6Path, "inspect", "-")
 			cmd.Stdin = strings.NewReader(script)
 			out, err := cmd.CombinedOutput()

@@ -51,7 +51,8 @@ func run(args []string, flags Flags, stdout, stderr io.Writer) int {
 	k6Path, err := exec.LookPath("k6")
 	if err != nil {
 		fmt.Fprintln(stderr, "k6 not found in PATH. Install k6: https://grafana.com/docs/k6/latest/set-up/install-k6/")
-		fmt.Fprintln(stderr, "Or build a custom k6 with xk6: https://grafana.com/docs/k6/latest/set-up/set-up-distributed-k6/")
+		fmt.Fprintln(stderr,
+			"Or build a custom k6 with xk6: https://grafana.com/docs/k6/latest/set-up/set-up-distributed-k6/")
 		return 1
 	}
 
